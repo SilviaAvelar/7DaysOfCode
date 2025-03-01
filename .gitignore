@@ -1,0 +1,36 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# IDEs/Editors
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Logs e depurações
+logs/
+*.log
+*.log.*
+debug.log
+.DS_Store
+
+# Ambientes
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Builds e distros
+dist/
+build/
+out/
+coverage/
+
+# Cache
+.cache/
+.nyc_output/

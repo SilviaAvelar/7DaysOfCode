@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Questionário Interativo</h1>
+
+        <div id="cardInicial" class="card">
+            <p id="perguntaInicial"></p>
+            <input type="text" id="respostaInicial" placeholder="Sua resposta aqui">
+            <button id="btnProximoInicial">Próximo</button>
+            <p id="mensagemInicial" style="display: none;"></p>
+        </div>
+
+        <div id="cardSegundaParte" class="card" style="display: none;">
+            <h2>Você Gosta de Estudar [Linguagem]?</h2>
+            <p>Responda com 1 para SIM ou 2 para NÃO:</p>
+            <input type="text" id="respostaGosta" placeholder="Digite 1 ou 2">
+            <button id="btnRespostaGosta">Enviar</button>
+            <p id="mensagemGosta" style="display: none;"></p>
+        </div>
+
+    </div>
+
+    <script src="twoDay.js"></script>
+
+</body>
+</html>

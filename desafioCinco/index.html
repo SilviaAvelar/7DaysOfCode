@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Lista de Compras</h1>
+        <button id="btnAddItem">Adicionar Item</button>
+        <button id="btnMostrarLista">Mostrar Lista</button>
+
+        <div id="divAdicionarItem" style="display: none;">
+            <label for="itemNome">Nome do Item:</label>
+            <input type="text" id="itemNome"><br><br>
+
+            <label for="itemCategoria">Categoria:</label>
+            <select id="itemCategoria">
+                <option value="frutas">Frutas</option>
+                <option value="laticinios">Laticínios</option>
+                <option value="congelados">Congelados</option>
+                <option value="doces">Doces</option>
+                <option value="carnes">Carnes</option>
+                <option value="legumes">Legumes</option>
+                <option value="outros">Outros</option>
+            </select><br><br>
+
+            <button id="btnSalvarItem">Salvar Item</button>
+            <button id="btnCancelarItem">Cancelar</button>
+        </div>
+
+        <div id="divListaCompras" style="display: none;">
+            <h2>Lista de Compras:</h2>
+            <ul id="listaCompras"></ul>
+        </div>
+
+        <div id="divResultado" style="display: none;">
+            <h2>Resultado</h2>
+            <p id="resultado"></p>
+        </div>
+    </div>
+
+    <script src="fiveDay.js"></script>
+
+</body>
+</html>

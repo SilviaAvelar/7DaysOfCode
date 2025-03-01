@@ -1,0 +1,55 @@
+body {
+    background-image: url("perguntas.jpg"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    font-family: sans-serif;
+    margin: 0; 
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    color: #333; 
+}
+
+.container {
+    width: 80%;
+    max-width: 600px; 
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgba(14, 47, 235, 0.93); 
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
