@@ -1,10 +1,10 @@
 body {
     font-family: sans-serif;
-    background-color: #f0f0f0; /* Cor de fundo de fallback */
-    background-image: url("jogo.jpg"); /* Caminho para sua imagem */
-    background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    background-position: center center; /* Centraliza a imagem */
+    background-color: #f0f0f0;
+    background-image: url("jogo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,10 +14,10 @@ body {
 }
 
 #container {
-    background-color:rgb(240, 235, 175);
+    background-color: rgb(240, 235, 175);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 20px 5px rgba(40, 235, 14, 0.93); 
+    box-shadow: 0 0 20px 5px rgba(40, 235, 14, 0.93);
     text-align: center;
 }
 
@@ -35,4 +35,28 @@ button {
 #resultado {
     margin-top: 20px;
     font-weight: bold;
+}
+
+#questao ul {
+    padding-left: 0;
+    list-style-type: none; /* Remove os pontinhos */
+    margin-left: 0;
+}
+
+#questao li {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.botao-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+img {
+    width: 100px;
+    height: auto;
 }

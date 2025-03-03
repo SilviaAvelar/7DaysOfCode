@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio de Comparação</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div id="container">
         <h1>Desafio de Comparação</h1>
-        <img src="controle.png" alt="Imagem do Jogo" width="200">
-        <button id="jogar">Jogar!</button>
+
+        <p id="explicacao">Vamos comparar valores numéricos e strings para entender como o JavaScript trata tipos de
+            dados.</p>
+
+        <div id="questao">
+            <p>Será que as variáveis abaixo são iguais?</p>
+            <ul>
+                <li><code>1</code> (número) e <code>'1'</code> (string)</li>
+                <li><code>30</code> (número) e <code>'30'</code> (string)</li>
+                <li><code>10</code> (número) e <code>'10'</code> (string)</li>
+            </ul>
+        </div>
+
+        <div class="botao-container">
+            <img src="controle.png" alt="Imagem do Jogo">
+            <button id="jogar">Jogar!</button>
+        </div>
+
         <div id="resultado"></div>
     </div>
 
     <script src="oneDay.js"></script>
 
 </body>
+
 </html>
