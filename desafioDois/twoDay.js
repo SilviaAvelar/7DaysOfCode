@@ -2,7 +2,7 @@
 
 /* Você vai complementar o código para que, depois de exibir a mensagem anterior, o programa pergunte: Você gosta de estudar [linguagem]? Responda com o número 1 para SIM ou 2 para NÃO. E aí, dependendo da resposta, ele deve mostrar uma das seguintes mensagens: 1 > Muito bom! Continue estudando e você terá muito sucesso. 2 > Ahh que pena... Já tentou aprender outras linguagens? */
 
-// Parte 1: Questionário Inicial
+const cardInstrucoes = document.getElementById('cardInstrucoes');
 const cardInicial = document.getElementById('cardInicial');
 const perguntaInicial = document.getElementById('perguntaInicial');
 const respostaInicial = document.getElementById('respostaInicial');
@@ -10,12 +10,15 @@ const btnProximoInicial = document.getElementById('btnProximoInicial');
 const mensagemInicial = document.getElementById('mensagemInicial');
 const cardSegundaParte = document.getElementById('cardSegundaParte');
 
+const respostaGosta = document.getElementById('respostaGosta');
+const btnRespostaGosta = document.getElementById('btnRespostaGosta');
+const mensagemGosta = document.getElementById('mensagemGosta');
+
 let perguntasIniciais = [
     "Qual o seu nome?",
     "Quantos anos você tem?",
     "Qual linguagem de programação você está estudando?"
 ];
-
 let respostasIniciais = [];
 let perguntaInicialIndex = 0;
 
@@ -26,29 +29,39 @@ function exibirPerguntaInicial() {
 
 function exibirMensagemInicial() {
     cardInicial.style.display = "none";
+    
     const nome = respostasIniciais[0];
     const idade = respostasIniciais[1];
     const linguagem = respostasIniciais[2];
-    mensagemInicial.textContent = `Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem}!`;
+    
+    mensagemInicial.innerHTML = `
+        <p>Olá <span class="resposta">${nome}</span>, você tem <span class="resposta">${idade}</span> anos e já está aprendendo <span class="resposta">${linguagem}</span>!</p>
+    `;
     mensagemInicial.style.display = "block";
     cardSegundaParte.style.display = "block";
     cardSegundaParte.querySelector("h2").innerHTML = `<b>Você Gosta de Estudar ${linguagem}?</b>`;
 }
 
 function resetarQuestionario() {
-    cardInicial.style.display = "block";
+    cardInstrucoes.style.display = "block"; 
+    cardInicial.style.display = "none";
     cardSegundaParte.style.display = "none";
     mensagemInicial.style.display = "none";
-
     respostasIniciais = [];
     perguntaInicialIndex = 0;
 
-    exibirPerguntaInicial();
-
-    // Limpa a resposta do segundo card
     respostaGosta.value = "";
     mensagemGosta.style.display = "none";
 }
+
+const btnComecar = document.getElementById('btnComecar');
+btnComecar.addEventListener('click', function () {
+    cardInstrucoes.style.display = "none"; 
+    cardInicial.style.display = "block";   
+    exibirPerguntaInicial();
+});
+
+cardInstrucoes.style.display = "block"; 
 
 btnProximoInicial.addEventListener('click', function () {
     const resposta = respostaInicial.value.trim();
@@ -68,13 +81,6 @@ btnProximoInicial.addEventListener('click', function () {
     }
 });
 
-exibirPerguntaInicial();
-
-// Parte 2: Você Gosta de Estudar [Linguagem]?
-const respostaGosta = document.getElementById('respostaGosta');
-const btnRespostaGosta = document.getElementById('btnRespostaGosta');
-const mensagemGosta = document.getElementById('mensagemGosta');
-
 btnRespostaGosta.addEventListener('click', function () {
     const resposta = respostaGosta.value.trim();
 
@@ -90,11 +96,10 @@ btnRespostaGosta.addEventListener('click', function () {
         mensagem = "Ahh que pena... Já tentou aprender outras linguagens?";
     }
 
-    mensagemGosta.textContent = mensagem;
+    mensagemGosta.innerHTML = `<span class="resposta">${mensagem}</span>`;
     mensagemGosta.style.display = "block";
 
-    // Esperar um pouco antes de resetar o questionário
     setTimeout(() => {
         resetarQuestionario();
-    }, 5000); // Espera 5 segundos (5000 milissegundos)
+    }, 5000); 
 });

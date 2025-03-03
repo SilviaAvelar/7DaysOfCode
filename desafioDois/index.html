@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionário Interativo</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
     <div class="container">
         <h1>Questionário Interativo</h1>
 
-        <div id="cardInicial" class="card">
-            <p id="perguntaInicial"></p>
-            <input type="text" id="respostaInicial" placeholder="Sua resposta aqui">
+        <div id="cardInstrucoes" class="card">
+            <h2>Instruções do Jogo</h2>
+            <p>Este jogo consiste em responder a algumas perguntas sobre você. Ao final, você receberá uma mensagem personalizada. Vamos lá?</p>
+            <button id="btnComecar">Começar</button>
+        </div>
+
+        <div id="cardInicial" style="display: none;">
+            <h3 id="perguntaInicial"></h3>
+            <input type="text" id="respostaInicial" />
             <button id="btnProximoInicial">Próximo</button>
-            <p id="mensagemInicial" style="display: none;"></p>
         </div>
 
-        <div id="cardSegundaParte" class="card" style="display: none;">
-            <h2>Você Gosta de Estudar [Linguagem]?</h2>
-            <p>Responda com 1 para SIM ou 2 para NÃO:</p>
-            <input type="text" id="respostaGosta" placeholder="Digite 1 ou 2">
+        <div id="mensagemInicial" style="display: none;"></div>
+
+        <div id="cardSegundaParte" style="display: none;">
+            <h2></h2>
+            <input type="text" id="respostaGosta" placeholder="1 para SIM ou 2 para NÃO" />
             <button id="btnRespostaGosta">Enviar</button>
-            <p id="mensagemGosta" style="display: none;"></p>
+            <div id="mensagemGosta" style="display: none;"></div>
         </div>
-
     </div>
 
     <script src="twoDay.js"></script>
-
 </body>
+
 </html>
