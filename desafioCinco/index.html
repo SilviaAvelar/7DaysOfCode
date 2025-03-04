@@ -6,18 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Compras</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        #btnRemover {
-            display: none; /* Inicialmente escondido */
-        }
-    </style>
 </head>
 
 <body>
 
+    <header>
+        <h1>Lista de Compras</h1>
+    </header>
+
     <div class="container">
-        <div id="feedbackMessage" style="display: none; color: green; padding: 10px; border: 1px solid green; margin-top: 10px;"></div>
-        <h1>Lista de Compras - Jogo</h1>
+        <div id="feedbackMessage" style="display: none;"></div>
 
         <div id="telaInicial">
             <p>Bem-vindo ao Jogo da Lista de Compras!</p>
@@ -29,7 +27,7 @@
             <p id="perguntaItem">Deseja adicionar um item à lista de compras? (sim/não)</p>
             <button id="btnSim">Sim</button>
             <button id="btnNao">Não</button>
-            <button id="btnRemover">Remover</button> <!-- Adicionado o botão remover -->
+            <button id="btnRemover">Remover</button> 
 
             <div id="divFormulario" style="display: none;">
                 <label for="itemNome">Nome do Item:</label>
@@ -47,7 +45,7 @@
                 </select><br><br>
 
                 <button id="btnAdicionar">Adicionar à Lista</button>
-                <p id="mensagemErro" style="display: none; color: red;">Por favor, preencha o nome do item.</p>
+                <p id="mensagemErro" style="display: none;">Por favor, preencha o nome do item.</p>
             </div>
         </div>
 

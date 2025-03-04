@@ -25,7 +25,7 @@ const mensagemErro = document.getElementById("mensagemErro");
 
 const listaComprasUl = document.getElementById("listaCompras");
 const perguntaItem = document.getElementById("perguntaItem");
-const feedbackMessage = document.getElementById("feedbackMessage"); // Adicionado
+const feedbackMessage = document.getElementById("feedbackMessage");
 
 let listaCompras = {
     frutas: [],
@@ -37,17 +37,14 @@ let listaCompras = {
     outros: []
 };
 
-// Começar o jogo
 btnComecar.addEventListener("click", () => {
     telaInicial.style.display = "none";
     telaAdicionarItem.style.display = "block";
     updateQuestionText();
 });
 
-// Deseja adicionar item?
 btnSim.addEventListener("click", () => {
     divFormulario.style.display = "block";
-     // Esconde a pergunta e os botões "Sim", "Não" e "Remover"
     perguntaItem.style.display = "none";
     btnSim.style.display = "none";
     btnNao.style.display = "none";
@@ -59,7 +56,6 @@ btnNao.addEventListener("click", () => {
     telaAdicionarItem.style.display = "none";
     telaMostrarLista.style.display = "block";
 
-    // Adiciona o botão "Voltar" na tela de mostrar lista (após responder "não")
     const liVoltarNao = document.createElement("li");
     liVoltarNao.innerHTML = `<button id="btnVoltarNao">Voltar para adicionar/remover</button>`;
     listaComprasUl.appendChild(liVoltarNao);
@@ -67,21 +63,19 @@ btnNao.addEventListener("click", () => {
     document.getElementById("btnVoltarNao").addEventListener("click", () => {
         telaMostrarLista.style.display = "none";
         telaAdicionarItem.style.display = "block";
-          // Mostra a pergunta e os botões "Sim", "Não" e "Remover"
         perguntaItem.style.display = "block";
         btnSim.style.display = "inline-block";
         btnNao.style.display = "inline-block";
         btnRemover.style.display = "inline-block";
         updateQuestionText();
     });
-     // Esconde a pergunta e os botões "Sim", "Não" e "Remover"
+
     perguntaItem.style.display = "none";
     btnSim.style.display = "none";
     btnNao.style.display = "none";
     btnRemover.style.display = "none";
 });
 
-// Adicionar item à lista
 btnAdicionar.addEventListener("click", () => {
     const nome = itemNomeInput.value.trim();
     const categoria = itemCategoriaSelect.value;
@@ -97,17 +91,20 @@ btnAdicionar.addEventListener("click", () => {
     itemCategoriaSelect.selectedIndex = 0;
     divFormulario.style.display = "none";
     updateQuestionText();
-
-    // Mensagem de feedback ao adicionar
     showFeedbackMessage(`"${nome}" foi adicionado à lista de compras na categoria "${categoria}".`);
-     // Mostra a pergunta e os botões "Sim", "Não" e "Remover"
+
     perguntaItem.style.display = "block";
     btnSim.style.display = "inline-block";
     btnNao.style.display = "inline-block";
     btnRemover.style.display = "inline-block";
 });
 
-// Mostrar Lista de Compras
+btnRemover.addEventListener("click", () => {
+    telaAdicionarItem.style.display = "none";
+    telaMostrarLista.style.display = "block";
+    mostrarListaParaRemocao();
+});
+
 function mostrarLista() {
     listaComprasUl.innerHTML = "";
 
@@ -120,13 +117,6 @@ function mostrarLista() {
         }
     }
 }
-
-// Remover item da lista
-btnRemover.addEventListener("click", () => {
-    telaAdicionarItem.style.display = "none";
-    telaMostrarLista.style.display = "block";
-    mostrarListaParaRemocao();
-});
 
 function mostrarListaParaRemocao() {
     listaComprasUl.innerHTML = "";
@@ -147,17 +137,12 @@ function mostrarListaParaRemocao() {
                     const categoria = event.target.dataset.categoria;
                     const itemParaRemover = event.target.dataset.item;
                     removerItemEspecifico(categoria, itemParaRemover);
-                    mostrarLista();
-                    telaMostrarLista.style.display = "none";
-                    telaAdicionarItem.style.display = "block";
-                    updateQuestionText();
                 });
                 itemIndex++;
             });
         }
     }
 
-    // Adiciona o botão "Voltar" apenas se estiver removendo itens
     if (hasItemsInList()) {
         const liVoltarNao = document.createElement("li");
         liVoltarNao.innerHTML = `<button id="btnVoltarLista">Voltar para adicionar/remover</button>`;
@@ -167,7 +152,6 @@ function mostrarListaParaRemocao() {
             telaMostrarLista.style.display = "none";
             telaAdicionarItem.style.display = "block";
             updateQuestionText();
-               // Mostra a pergunta e os botões "Sim", "Não" e "Remover"
             perguntaItem.style.display = "block";
             btnSim.style.display = "inline-block";
             btnNao.style.display = "inline-block";
@@ -180,40 +164,32 @@ function removerItemEspecifico(categoria, itemParaRemover) {
     const index = listaCompras[categoria].indexOf(itemParaRemover);
     if (index > -1) {
         listaCompras[categoria].splice(index, 1);
-        console.log(`O item "${itemParaRemover}" foi removido da categoria "${categoria}".`);
-        // Mensagem de feedback ao remover
         showFeedbackMessage(`"${itemParaRemover}" foi removido da lista de compras.`);
     } else {
-        console.log("Não foi possível encontrar o item dentro da lista!");
         showFeedbackMessage("Não foi possível encontrar o item dentro da lista!");
     }
 
-    //Voltar automaticamente para tela de adicionar se a lista estiver vazia
-    if (Object.values(listaCompras).every(categoria => categoria.length === 0)) {
-        telaMostrarLista.style.display = "none";
-        telaAdicionarItem.style.display = "block";
-    }
+    mostrarLista();
+    telaMostrarLista.style.display = "none";
+    telaAdicionarItem.style.display = "block";
     updateQuestionText();
-       // Mostra a pergunta e os botões "Sim", "Não" e "Remover"
     perguntaItem.style.display = "block";
     btnSim.style.display = "inline-block";
     btnNao.style.display = "inline-block";
     btnRemover.style.display = "inline-block";
 }
 
-// Atualizar o texto da pergunta (incluindo a opção de remover)
 function updateQuestionText() {
     let questionText = "Deseja adicionar um item à lista de compras? (sim/não)";
     if (hasItemsInList()) {
         questionText += " ou remover?";
-        btnRemover.style.display = "inline-block"; // Mostra o botão remover
+        btnRemover.style.display = "inline-block";
     } else {
-        btnRemover.style.display = "none"; // Esconde o botão remover se não houver itens
+        btnRemover.style.display = "none"; /
     }
     perguntaItem.textContent = questionText;
 }
 
-// Verifica se há itens na lista (em qualquer categoria)
 function hasItemsInList() {
     for (const categoria in listaCompras) {
         if (listaCompras[categoria].length > 0) {
@@ -223,13 +199,11 @@ function hasItemsInList() {
     return false;
 }
 
-// Função para exibir a mensagem de feedback
 function showFeedbackMessage(message) {
     feedbackMessage.textContent = message;
+    feedbackMessage.className = message.includes("foi adicionado") ? "sucesso" : "erro";
     feedbackMessage.style.display = "block";
-
-    // Oculta a mensagem após alguns segundos
     setTimeout(() => {
         feedbackMessage.style.display = "none";
-    }, 3000); // Exibe a mensagem por 3 segundos
+    }, 3000);
 }
