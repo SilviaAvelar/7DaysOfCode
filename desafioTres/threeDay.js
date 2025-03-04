@@ -24,7 +24,6 @@ btnComecar.addEventListener("click", () => {
     telaArea.style.display = "block";
 });
 
-// Area
 telaArea.addEventListener("click", (event) => {
     if (event.target.tagName === "BUTTON") {
         areaEscolhida = event.target.dataset.area;
@@ -35,27 +34,29 @@ telaArea.addEventListener("click", (event) => {
 
 function exibirTelaTecnologia(area) {
     telaTecnologia.innerHTML = "<h2>Qual tecnologia você quer aprender?</h2>";
-    if (area === "Front-End") {
-        telaTecnologia.innerHTML +=
-            '<button data-tecnologia="React">React</button>' +
-            '<button data-tecnologia="Vue">Vue</button>';
-    } else {
-        telaTecnologia.innerHTML +=
-            '<button data-tecnologia="C#">C#</button>' +
-            '<button data-tecnologia="Java">Java</button>';
-    }
-    telaTecnologia.style.display = "block";
 
-    telaTecnologia.addEventListener("click", (event) => {
-        if (event.target.tagName === "BUTTON") {
-            tecnologiaEscolhida = event.target.dataset.tecnologia;
-            telaTecnologia.style.display = "none";
-            telaCaminho.style.display = "block";
-        }
+    const tecnologias = area === "Front-End" 
+        ? ['React', 'Vue'] 
+        : ['C#', 'Java'];
+
+    tecnologias.forEach(tecnologia => {
+        const button = document.createElement("button");
+        button.textContent = tecnologia;
+        button.dataset.tecnologia = tecnologia;
+        telaTecnologia.appendChild(button);
     });
+
+    telaTecnologia.style.display = "block";
 }
 
-// Caminho
+telaTecnologia.addEventListener("click", (event) => {
+    if (event.target.tagName === "BUTTON") {
+        tecnologiaEscolhida = event.target.dataset.tecnologia;
+        telaTecnologia.style.display = "none";
+        telaCaminho.style.display = "block";
+    }
+});
+
 telaCaminho.addEventListener("click", (event) => {
     if (event.target.tagName === "BUTTON") {
         caminhoEscolhido = event.target.dataset.caminho;
@@ -64,15 +65,17 @@ telaCaminho.addEventListener("click", (event) => {
     }
 });
 
-// Tecnologias Adicionais
 btnAdicionarTecnologia.addEventListener("click", () => {
     const tecnologia = inputTecnologia.value.trim();
-    if (tecnologia !== "") {
+    
+    if (tecnologia) {
         tecnologiasAdicionais.push(tecnologia);
+        
         const li = document.createElement("li");
         li.textContent = tecnologia;
         listaTecnologias.appendChild(li);
-        inputTecnologia.value = ""; // Limpa o campo
+
+        inputTecnologia.value = ""; 
     }
 });
 
@@ -82,11 +85,12 @@ btnFinalizarTecnologias.addEventListener("click", () => {
     exibirMensagemFinal();
 });
 
-// Exibir Mensagem Final
 function exibirMensagemFinal() {
     let mensagem = `Você escolheu seguir para a área de ${areaEscolhida} e aprender ${tecnologiaEscolhida}. Seu caminho será de ${caminhoEscolhido}!`;
-    mensagemFinal.textContent = mensagem;
+
     if (tecnologiasAdicionais.length > 0) {
-        mensagemFinal.textContent += ` Você também quer aprender: ${tecnologiasAdicionais.join(", ")}`;
+        mensagem += ` Você também quer aprender: ${tecnologiasAdicionais.join(", ")}.`;
     }
+
+    mensagemFinal.textContent = mensagem;
 }

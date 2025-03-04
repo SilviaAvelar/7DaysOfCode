@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio do Desenvolvedor</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="container">
-        <h1>Desafio do Desenvolvedor</h1>
+    <header class="header">
+        Desafio do Desenvolvedor
+    </header>
 
-        <div id="telaInicial" class="tela">
+    <main class="container">
+
+        <section id="telaInicial" class="tela">
             <p>Bem-vindo(a) ao Desafio da Escolha do Desenvolvedor!</p>
             <button id="btnComecar">Começar</button>
-        </div>
+        </section>
 
-        <div id="telaArea" class="tela" style="display: none;">
+        <section id="telaArea" class="tela" style="display: none;">
             <h2>Escolha sua área:</h2>
             <button data-area="Front-End">Front-End</button>
             <button data-area="Back-End">Back-End</button>
-        </div>
+        </section>
 
-        <div id="telaTecnologia" class="tela" style="display: none;">
+        <section id="telaTecnologia" class="tela" style="display: none;">
             <h2>Qual tecnologia você quer aprender?</h2>
-            <!-- Os botões serão gerados dinamicamente pelo JavaScript -->
-        </div>
+        </section>
 
-        <div id="telaCaminho" class="tela" style="display: none;">
+        <section id="telaCaminho" class="tela" style="display: none;">
             <h2>O que você quer agora?</h2>
             <button data-caminho="Especialização">Se especializar na área</button>
             <button data-caminho="Fullstack">Se tornar Fullstack</button>
-        </div>
+        </section>
 
-        <div id="telaTecnologiasAdicionais" class="tela" style="display: none;">
+        <section id="telaTecnologiasAdicionais" class="tela" style="display: none;">
             <h2>Quais tecnologias você quer aprender?</h2>
             <input type="text" id="inputTecnologia" placeholder="Digite a tecnologia">
             <button id="btnAdicionarTecnologia">Adicionar</button>
             <p id="mensagemTecnologia"></p>
             <button id="btnFinalizarTecnologias">Finalizar</button>
             <ul id="listaTecnologias"></ul>
-        </div>
+        </section>
 
-        <div id="telaFinal" class="tela" style="display: none;">
+        <section id="telaFinal" class="tela" style="display: none;">
             <h2>Resumo da sua Jornada:</h2>
             <p id="mensagemFinal"></p>
-        </div>
-    </div>
+        </section>
+
+    </main>
 
     <script src="threeDay.js"></script>
 
 </body>
+
 </html>
