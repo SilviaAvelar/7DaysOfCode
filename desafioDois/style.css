@@ -13,14 +13,33 @@ body {
     color: #333; 
 }
 
+.header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
 .container {
-    width: 80%;
+    width: 100%;
     max-width: 600px; 
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8); 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 20px 5px rgba(14, 47, 235, 0.93); 
+    box-shadow: 0 0 20px 5px rgba(14, 47, 235, 0.93);
+    margin-top: -200px; 
 }
 
 .card {
