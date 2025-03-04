@@ -128,8 +128,8 @@ function mostrarListaParaRemocao() {
                 const liItem = document.createElement("li");
                 const buttonId = `remover-${itemIndex}`;
                 liItem.innerHTML = `
-                  ${item}
-                  <button id="${buttonId}" data-categoria="${categoria}" data-item="${item}">Remover</button>
+                ${item}
+                <button id="${buttonId}" data-categoria="${categoria}" data-item="${item}">Remover</button>
                 `;
                 listaComprasUl.appendChild(liItem);
 
@@ -185,7 +185,7 @@ function updateQuestionText() {
         questionText += " ou remover?";
         btnRemover.style.display = "inline-block";
     } else {
-        btnRemover.style.display = "none"; /
+        btnRemover.style.display = "none";
     }
     perguntaItem.textContent = questionText;
 }
