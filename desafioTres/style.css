@@ -1,24 +1,26 @@
+/* Reset e configuração geral do body */
 body {
     font-family: sans-serif;
-    background-image: url("robo.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image: url("robo.png");
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; 
     margin: 0;
-    margin-top: -250px;  
     color: #333;
 }
 
+/* Estilos do cabeçalho */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro para destaque */
+    background-color: rgba(0, 0, 0, 0.8); 
     color: white;
     text-align: center;
     padding: 15px 0;
@@ -27,21 +29,26 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* Estilos do container do card */
 .container {
     border-radius: 8px;
     box-shadow: 0 0 20px 5px rgba(235, 231, 14, 0.93); 
-    color: white; 
+    color: white;
     padding: 20px;
-    width: 80%;
+    width: 100%;
     max-width: 600px;
     text-align: center;
+    margin: 0 auto;
+    margin-top: -250px; /* Ajuste para subir o card */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
+/* Estilos para a tela */
 .tela {
     margin-bottom: 20px;
 }
 
-/* Botões */
+/* Estilos gerais de botões */
 button {
     background-color: #007bff;
     color: white;
@@ -54,10 +61,12 @@ button {
     transition: background-color 0.3s ease;
 }
 
+/* Efeito hover para os botões */
 button:hover {
     background-color: #0056b3;
 }
 
+/* Estilos para campos de entrada */
 input[type="text"] {
     padding: 10px;
     border-radius: 5px;
@@ -65,6 +74,7 @@ input[type="text"] {
     margin-right: 10px;
 }
 
+/* Estilos para listas */
 ul {
     list-style-type: none;
     padding: 0;
@@ -72,4 +82,47 @@ ul {
 
 li {
     margin: 5px 0;
+}
+
+/* Estilos específicos para telas menores (máximo de 768px de largura) */
+@media (max-width: 768px) {
+    .header {
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    input[type="text"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Estilos específicos para telas muito pequenas (máximo de 480px de largura) */
+@media (max-width: 480px) {
+    .header {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    input[type="text"] {
+        font-size: 12px;
+        padding: 6px;
+    }
 }
