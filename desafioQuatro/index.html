@@ -8,15 +8,21 @@
 </head>
 <body>
 
-    <div class="container">
+    <header class="header">
         <h1>Jogo da Adivinhação</h1>
-        <p id="mensagemInicial">Adivinhe um número entre 0 e 10!</p>
-        <input type="number" id="chute" placeholder="Seu chute">
+    </header>
+
+    <main class="container">
+        <p id="mensagemInicial"><b>Adivinhe um número entre 0 e 10!</b></p>
+        
+        <input type="number" id="chute" placeholder="Seu chute" min="0" max="10">
         <button id="btnChutar">Chutar</button>
+
         <p id="mensagem"></p>
         <p id="tentativasRestantes"></p>
+
         <button id="btnNovoJogo">Novo Jogo</button>
-    </div>
+    </main>
 
     <script src="forDay.js"></script>
 
