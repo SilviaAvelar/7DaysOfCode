@@ -1,14 +1,14 @@
 body {
     font-family: sans-serif;
     background-image: url("robo.png");
-    background-size: cover; 
+    background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; 
+    min-height: 100vh;
     margin: 0;
     color: #333;
 }
@@ -18,7 +18,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); 
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     text-align: center;
     padding: 15px 0;
@@ -29,15 +29,15 @@ body {
 
 .container {
     border-radius: 8px;
-    box-shadow: 0 0 20px 5px rgba(235, 231, 14, 0.93); 
+    box-shadow: 0 0 20px 5px rgba(235, 231, 14, 0.93);
     color: white;
     padding: 20px;
     width: 100%;
     max-width: 600px;
     text-align: center;
     margin: 0 auto;
-    margin-top: -250px; /* Ajuste para subir o card */
     background-color: rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
 }
 
 .tela {
@@ -83,6 +83,8 @@ li {
 
     .container {
         padding: 15px;
+        max-width: 100%; 
+        margin-top: 50px; 
     }
 
     button {
@@ -104,6 +106,8 @@ li {
 
     .container {
         padding: 10px;
+        max-width: 100%;
+        margin-top: 50px; /* Ajuste adicional para garantir que a área da tela fique visível */
     }
 
     button {
