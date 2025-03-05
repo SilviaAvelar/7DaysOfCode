@@ -3,8 +3,7 @@ body {
     font-family: sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center; 
-
+    background-position: center center;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
@@ -34,7 +33,25 @@ header {
     width: 80%;
     max-width: 600px;
     text-align: center;
-    margin-top: -220px;
+    margin-top: -220px; 
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 button {
@@ -51,13 +68,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-select, input[type="text"] {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin: 5px;
-}
-
 ul {
     list-style-type: none;
     padding: 0;
@@ -69,25 +79,25 @@ li {
 }
 
 #feedbackMessage.sucesso {
-    background-color: #28a745;  
+    background-color: #28a745;
     color: white;
     border-radius: 5px;
 }
 
 #feedbackMessage.erro {
-    background-color: #dc3545;  
+    background-color: #dc3545;
     color: white;
     border-radius: 5px;
 }
 
 @media (max-width: 768px) {
     body {
-        background-size: cover; 
+        background-size: cover;
     }
 
     .container {
-        margin-top: 0; 
-        width: 90%; 
+        margin-top: 0;
+        width: 90%;
         padding: 15px;
     }
 
@@ -96,29 +106,30 @@ li {
     }
 
     button {
-        padding: 8px 15px; 
+        padding: 8px 15px;
     }
 
-    select, input[type="text"] {
-        width: 100%; 
+    select,
+    input[type="text"] {
+        width: 100%;
     }
 }
 
 @media (min-width: 1200px) {
     body {
         background-size: contain; 
-        background-size: cover; 
     }
 
     .container {
-        width: 60%; 
+        width: 60%;
     }
 
     button {
-        padding: 12px 25px; 
+        padding: 12px 25px;
     }
 
-    select, input[type="text"] {
-        width: 80%; 
+    select,
+    input[type="text"] {
+        width: 80%;
     }
 }

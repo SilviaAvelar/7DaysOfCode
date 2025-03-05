@@ -27,22 +27,25 @@
             <p id="perguntaItem">Deseja adicionar um item à lista de compras? (sim/não)</p>
             <button id="btnSim">Sim</button>
             <button id="btnNao">Não</button>
-            <button id="btnRemover">Remover</button> 
+            <button id="btnRemover">Remover</button>
 
             <div id="divFormulario" style="display: none;">
-                <label for="itemNome">Nome do Item:</label>
-                <input type="text" id="itemNome"><br><br>
-
-                <label for="itemCategoria">Categoria:</label>
-                <select id="itemCategoria">
-                    <option value="frutas">Frutas</option>
-                    <option value="laticinios">Laticínios</option>
-                    <option value="congelados">Congelados</option>
-                    <option value="doces">Doces</option>
-                    <option value="carnes">Carnes</option>
-                    <option value="legumes">Legumes</option>
-                    <option value="outros">Outros</option>
-                </select><br><br>
+                <div class="form-group">
+                    <label for="itemNome">Nome do Item:</label>
+                    <input type="text" id="itemNome">
+                </div>
+                <div class="form-group">
+                    <label for="itemCategoria">Categoria:</label>
+                    <select id="itemCategoria">
+                        <option value="frutas">Frutas</option>
+                        <option value="laticinios">Laticínios</option>
+                        <option value="congelados">Congelados</option>
+                        <option value="doces">Doces</option>
+                        <option value="carnes">Carnes</option>
+                        <option value="legumes">Legumes</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
 
                 <button id="btnAdicionar">Adicionar à Lista</button>
                 <p id="mensagemErro" style="display: none;">Por favor, preencha o nome do item.</p>
