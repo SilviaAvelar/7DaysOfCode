@@ -1,15 +1,15 @@
 body {
     font-family: sans-serif;
     background-color: #f0f0f0;
-    background-image: url("jogo.jpg");
+    background-image: url("trevo.jpg");
     background-size: cover; 
     background-position: center center; 
     background-attachment: fixed; 
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     min-height: 100vh;
     margin: 0;
 }
@@ -101,12 +101,14 @@ img {
 
 
 @media (max-width: 768px) {
+    /* Ajustes para telas menores (tablets e smartphones) */
     body {
-        background-size: cover;
+        background-size: cover; /* Garante que a imagem cubra a tela */
+        background-position: center center; /* Mantém a centralização da imagem */
     }
 
     img {
-        width: 80px;  
+        width: 80px;
     }
 
     h1 {
@@ -128,19 +130,17 @@ img {
         font-size: 14px;
         padding: 8px 16px;
     }
-
-    img {
-        width: 80px;
-    }
 }
 
 @media (max-width: 480px) {
+    /* Ajustes para telas muito pequenas (como celulares) */
     body {
-        background-size: cover;
+        background-size: cover; /* Garante que a imagem de fundo ainda cubra toda a tela */
+        background-position: center center; /* A imagem fica centralizada */
     }
-    
+
     img {
-        width: 70px;  
+        width: 70px;
     }
 
     h1 {
@@ -161,9 +161,5 @@ img {
     button {
         font-size: 12px;
         padding: 6px 12px;
-    }
-
-    img {
-        width: 70px;
     }
 }
