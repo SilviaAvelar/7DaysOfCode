@@ -1,0 +1,61 @@
+body {
+    font-family: sans-serif;
+    /* Adicione outros estilos básicos para o body aqui */
+}
+
+h1 {
+    text-align: center;
+}
+
+.desafios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
+    align-items: center;
+    /* Alinha os itens verticalmente */
+    gap: 10px;
+    /* Espaço entre as imagens */
+    margin-bottom: 10px;
+    /* Espaço abaixo das imagens */
+    padding: 20px; /* Adicionado padding ao container */
+}
+
+.desafio {
+    width: calc(33.33% - 10px);
+    /* Para 3 desafios por linha (ajuste conforme necessário) */
+    margin-bottom: 10px;
+    /* Espaço abaixo de cada desafio */
+    text-align: center; /* Centraliza o conteúdo dentro do desafio */
+}
+
+.desafio a {
+    display: block; /* Faz o link ocupar todo o espaço do desafio */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.desafio-image {
+    width: 100%;
+    /* A imagem ocupa toda a largura do contêiner .desafio */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    max-width: 150px;
+    /* Define uma largura máxima (ajuste conforme necessário) */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    transition: transform 0.3s ease;
+    /* Transição suave para o efeito de zoom */
+}
+
+.desafios-container a:hover .desafio-image {
+    transform: scale(1.1);
+    /* Aumenta um pouco a imagem no hover (opcional) */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .desafio {
+        width: calc(50% - 10px);
+        /* Para 2 desafios por linha em telas menores */
+    }
+}
