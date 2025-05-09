@@ -1,5 +1,11 @@
 # 7 Days de Lógica com JavaScript
 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+---
+
 O **7 Days de Lógica com JavaScript** é um desafio proposto pela **Alura One** para aprimorar conhecimentos em JavaScript, a linguagem de programação mais utilizada no mundo. Durante essa jornada, serão explorados conceitos fundamentais como variáveis, condicionais e estruturas de loop para resolver problemas do dia a dia.
 
 Ao longo dos sete dias de desafios, será possível desenvolver habilidades essenciais para qualquer pessoa que deseja ingressar na programação. Com a prática constante, a sintaxe dos comandos se tornará mais natural, permitindo um maior foco na resolução de problemas.
@@ -47,7 +53,14 @@ Além dos desafios diários, haverá um jogo interativo para escolher entre:
 
 ---
 
-💪 **Vamos nessa? Inscreva-se e comece agora mesmo!**
+## 📸 Prévia do Projeto  
+![Prévia do Projeto Marvel x Programação](./assets/desafio_1.png)
+![Prévia do Projeto Marvel x Programação](./assets/desafio_2.png)
+![Prévia do Projeto Marvel x Programação](./assets/desafio_3.png)
+![Prévia do Projeto Marvel x Programação](./assets/desafio_4.png)
+![Prévia do Projeto Marvel x Programação](./assets/desafio_5.png)
+![Prévia do Projeto Marvel x Programação](./assets/desafio_6.png)
+
 
 ---
 
