@@ -1,4 +1,4 @@
-# 7 Days de Lógica com JavaScript
+# 🧠 7 Days de Lógica com JavaScript
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -6,64 +6,104 @@
 
 ---
 
-O **7 Days de Lógica com JavaScript** é um desafio proposto pela **Alura One** para aprimorar conhecimentos em JavaScript, a linguagem de programação mais utilizada no mundo. Durante essa jornada, serão explorados conceitos fundamentais como variáveis, condicionais e estruturas de loop para resolver problemas do dia a dia.
+## ✨ Sobre o Desafio
 
-Ao longo dos sete dias de desafios, será possível desenvolver habilidades essenciais para qualquer pessoa que deseja ingressar na programação. Com a prática constante, a sintaxe dos comandos se tornará mais natural, permitindo um maior foco na resolução de problemas.
+O **7 Days de Lógica com JavaScript** é um desafio proposto pela **Alura One** com o objetivo de aprimorar habilidades em JavaScript, a linguagem mais utilizada no mundo.
 
----
+Durante 7 dias, você irá explorar conceitos fundamentais como:
 
-## 🌟 Desafios Diários
+- ✅ Variáveis  
+- ✅ Condicionais  
+- ✅ Loops  
+- ✅ Listas (Arrays)  
+- ✅ Organização de código
 
-### ✨ **Dia 1: Condicionais e Operadores Booleanos**
-No primeiro dia, o foco será o comando **if** e operações booleanas no JavaScript. Pequenos detalhes podem fazer toda a diferença no código, trazendo um resultado esperado ou inesperado dependendo da implementação.
-
-### 💡 **Dia 2: Captura de Inputs e Variáveis**
-Neste dia, será abordada a captura de dados do usuário e o armazenamento dessas informações em variáveis, tornando o código mais dinâmico e interativo.
-
-### 📚 **Dia 3: Narrativas Dinâmicas e Loops**
-Os conceitos aprendidos nos dias anteriores serão utilizados para criar uma narrativa interativa. Aqui, os loops serão empregados para manter a história em execução até que o usuário decida parar.
-
-### ⚔️ **Dia 4: Criando um Jogo Aleatório**
-No quarto dia, será trabalhada a **aleatoriedade**, criando um jogo onde o programa gera resultados imprevisíveis!
-
-### 🗂 **Dia 5: Trabalhando com Listas (Arrays)**
-Listas são fundamentais na programação! Neste dia, serão manipulados **arrays** para armazenar e gerenciar grandes volumes de informações de forma eficiente.
-
-### ❌ **Dia 6: Removendo Itens de uma Lista**
-Após aprender sobre manipulação de listas, será possível remover itens específicos delas, garantindo uma melhor gestão dos dados.
-
-### 🎨 **Dia 7: Organização de Código e Projeto Final**
-No último dia, todo o conhecimento adquirido será aplicado no desenvolvimento de um **projeto maior**. Aqui, será perceptível como a organização (ou falta dela) pode impactar a produtividade e a manutenção do código.
+Com a prática diária, a lógica de programação se tornará cada vez mais natural!
 
 ---
 
-## 🌟 Desafio Extra: Escolhas no Mundo da Programação 
+## 📅 Desafios Diários
 
-Além dos desafios diários, haverá um jogo interativo para escolher entre:
+### 💭 Dia 1: Condicionais e Operadores Booleanos
+> Uso de `if` e operadores booleanos para controlar o fluxo do código.
+
+### 🧾 Dia 2: Captura de Inputs e Variáveis
+> Entrada de dados pelo usuário e armazenamento em variáveis.
+
+### 🔁 Dia 3: Narrativas Dinâmicas e Loops
+> Criação de narrativas interativas com loops.
+
+### 🎲 Dia 4: Criando um Jogo Aleatório
+> Utilização de **aleatoriedade** para tornar os programas imprevisíveis.
+
+### 📋 Dia 5: Trabalhando com Listas (Arrays)
+> Manipulação de arrays para armazenar múltiplos dados.
+
+### ✂️ Dia 6: Removendo Itens de uma Lista
+> Técnicas para remover itens específicos de listas.
+
+### 🧩 Dia 7: Organização de Código + Projeto Final
+> Aplicação de todo o conteúdo aprendido em um **projeto completo**.
+
+---
+
+## 🎮 Desafio Extra: Escolhas no Mundo da Programação
+
+Durante o desafio, você também poderá escolher caminhos no mundo da tecnologia:
 
 1. **Front-End ou Back-End**
-   - Para quem optar por **Front-End**, poderá aprender **React** ou **Vue**.
-   - Para quem optar por **Back-End**, poderá aprender **C#** ou **Java**.
+   - Front-End: React ou Vue
+   - Back-End: C# ou Java
 
-2. **Especialização ou Fullstack?**
-   - O participante poderá se especializar em uma área ou seguir o caminho Fullstack.
+2. **Especialização ou Fullstack**
+   - Especialize-se em uma área ou siga o caminho Fullstack!
 
 3. **Explorando Novas Tecnologias**
-   - Será possível adicionar quantas tecnologias quiser na lista de aprendizado e descobrir novas oportunidades!
+   - Adicione novas tecnologias à sua jornada de aprendizado!
 
 ---
 
-## 📸 Prévia do Projeto  
-![Prévia do Projeto Marvel x Programação](./assets/desafio_1.png)
-![Prévia do Projeto Marvel x Programação](./assets/desafio_2.png)
-![Prévia do Projeto Marvel x Programação](./assets/desafio_3.png)
-![Prévia do Projeto Marvel x Programação](./assets/desafio_4.png)
-![Prévia do Projeto Marvel x Programação](./assets/desafio_5.png)
-![Prévia do Projeto Marvel x Programação](./assets/desafio_6.png)
+## 📸 Prévia do Projeto
 
+| Desafio 1 | Desafio 2 |
+|----------|----------|
+| ![Desafio 1](./assets/desafio_1.png) | ![Desafio 2](./assets/desafio_2.png) |
+
+| Desafio 3 | Desafio 4 |
+|----------|----------|
+| ![Desafio 3](./assets/desafio_3.png) | ![Desafio 4](./assets/desafio_4.png) |
+
+| Desafio 5 | Desafio 6 |
+|----------|----------|
+| ![Desafio 5](./assets/desafio_5.png) | ![Desafio 6](./assets/desafio_6.png) |
 
 ---
 
-🎨 **Créditos:** Este desafio faz parte de uma série de práticas promovidas pela **Alura One** para aprimorar a lógica de programação com JavaScript.
+## 👩‍🏫 Instrutora
 
-📌 **Instrutora:** [Rafaella Ballerini]
+- **Rafaella Ballerini**  
+  Instrutora e criadora de conteúdo pela Alura One
+
+---
+
+## 🙋‍♀️ Sobre Mim
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&color=F7C52C&center=true&vCenter=true&width=700&height=70&lines=Olá,+sou+a+Sílvia+Avelar!;Desenvolvedora+Front-End;Apaixonada+por+Código+e+Café;Eternamente+Aprendendo..." alt="Typing SVG" />
+</p>
+
+<p align="center">
+  Desenvolvido com 💙 por <strong>Sílvia Avelar</strong>
+</p>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/silvia-avelar/" target="_blank">
+    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  &nbsp;
+  <a href="https://silviaavelar.github.io/Portfolio/" target="_blank">
+    <img src="https://img.shields.io/badge/-Portfólio-FF4081?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfólio">
+  </a>
+</p>
+
+<p align="center">Entre em contato ou veja outros projetos!</p>
